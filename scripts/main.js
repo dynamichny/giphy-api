@@ -5,15 +5,15 @@ const searchBtn = $('.search');
 const showMoreBtn = $('.showMore');
 let active = $('.active');
 
-let howMany = 25;
+let gifs = [];
 let timesMore = 1;
 
 $(document).ready(function(){
-    getTrending(howMany);
+    getTrending();
     showMoreBtn.click(()=>{
         timesMore ++;
-        showMoreTrending(howMany, timesMore);
+        showMoreTrending();
     });
-    trendingBtn.click(getTrending(howMany));    
+    trendingBtn.click(getTrending());    
 });
 
