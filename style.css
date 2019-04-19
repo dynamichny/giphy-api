@@ -28,6 +28,7 @@ nav{
     border: 2px solid rgb(40, 255, 105);
     border-radius: 2vw;
     display: block;
+    cursor: pointer;
 }
 .navbar .active{
     border: 2px solid rgb(255, 0, 157);
@@ -90,6 +91,28 @@ nav img{
     height: 100%;
 }
 .showPic img{
-    padding-top:10vh;
     width:50vmax;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.searchInput{
+    display:flex;
+    flex-direction: row;
+}
+
+.searchInput button{
+    border-radius: 0 2vw 2vw 0;
+    width: 100px;
+    border-left: none;
+    cursor: pointer;
+
+}
+.searchInput input{
+    border-radius: 2vw 0 0 2vw;
+    border: 2px solid rgb(40, 255, 105);
+    border-right: none;
+    padding-left: 10px;
 }
