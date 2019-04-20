@@ -50,6 +50,7 @@ nav h1{
 .searchInput button{
     border-radius: 0 20px 20px 0;
     width: 100px;
+    height: 40px;
     border-left: none;
     cursor: pointer;
 
@@ -106,8 +107,9 @@ nav h1{
     width: 80%;
     background: transparent;
     border: 2px solid rgb(40, 255, 105);
-    border-radius: 20;
-    margin:20px 0px 50px 0 ;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    margin:20px 0 50px 0;
     cursor: pointer;
     transition: transform 0.2s;
 }
