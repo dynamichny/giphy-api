@@ -26,7 +26,7 @@ function getRandom(){
     random.done(function(data) {
         let e = data.data;
         if(e.images.original.url){
-            $('main').append(`<img src="${e.images.original.url}" class="randomImg" onclick="showPic('${e.images.original.url}')">`);            
+            $('main').append(`<img src="${e.images.original.url}" class="randomImg">`);            
         }     
     });
 }
