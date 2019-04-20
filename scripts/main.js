@@ -1,38 +1,33 @@
-const box = $('.giphyHere');
 const trendingBtn = $('.trending');
 const randomBtn =  $('.random');
 const searchBtn = $('.search');
 const showMoreBtn = $('.showMore');
-const searchhInput = $('.searchInput > input')
-
-
+const searchhInput = $('.searchInput > input');
+const main = $('main');
 let active = $('.active');
-let gifs = [];
-let timesMore = 1;
+let timesMore = 2;
 
 $(document).ready(function(){
     getTrending();
-    showMoreBtn.click(()=>{
-        timesMore ++;
+    $('.showMore').click(()=>{
+        console.log('o')
         showMoreTrending(25,timesMore);
     });
     
     trendingBtn.click((event)=>{
         event.preventDefault();
-        box.empty();
         getTrending();
     });
 
     searchBtn.click((event)=>{
         event.preventDefault();
         if(searchhInput.val()){
-        box.empty();
-        searchFnc(searchhInput.val());
+        getSearch(searchhInput.val());
+        searchhInput.val(val => val = '');
     }});
     
     randomBtn.click((event)=>{
         event.preventDefault();
-        box.empty();
         getRandom();
     });
 });

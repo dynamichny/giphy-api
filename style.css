@@ -5,6 +5,8 @@ body{
     padding: 0;
     font-family: 'Roboto', sans-serif;
 }
+
+/* NAVBAR */
 nav{
     width:100%;
     height:100px;
@@ -28,6 +30,7 @@ nav{
     border: 2px solid rgb(40, 255, 105);
     border-radius: 2vw;
     display: block;
+    font-size: 1rem;
     cursor: pointer;
 }
 .navbar .active{
@@ -36,66 +39,6 @@ nav{
 }
 nav img{
     height: 100px;
-}
-.giphyHere {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 10px;
-    grid-auto-flow: unset;
-    list-style: none;
-    margin: 1em auto;
-    padding-top:50px;
-    max-width: 800px;
-
-}
-.giphyHere li {
-    border: 1px solid #ccc;
-}
-
-.giphyHere li img {
-   display: block;
-   object-fit: cover;
-   width: 100%;
-   height: 100%;
-   transition: transform 0.3s;
-   cursor: pointer;
-}
-.showMore{
-    height: 50px;
-    max-width: 830px;
-    width: 100%;
-    background: transparent;
-    border: 2px solid rgb(40, 255, 105);
-    border-radius: 20;
-    margin:20px 0px 20px 50px;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.showMore:hover{
-    transform: scale(1.12);
-    border: 2px solid rgba(0, 255, 76, 0.5);
-    
-}
-.giphyHere li img:hover {
-    transform: scale(1.05)
-}
-
-.showPic{
-    background-color: hsla(0, 0%, 0%, 0.767);
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    z-index: 1;
-    width:100%;
-    height: 100%;
-}
-.showPic img{
-    width:50vmax;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .searchInput{
@@ -115,4 +58,82 @@ nav img{
     border: 2px solid rgb(40, 255, 105);
     border-right: none;
     padding-left: 10px;
+}
+
+.navbar > *{
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.navbar > *:hover{
+    transform:scale(1.1);
+    box-shadow: 3px 9px 22px -15px rgba(0,0,0,0.75);
+}
+/* main ul */
+.giphyHere {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px;
+    grid-auto-flow: unset;
+    list-style: none;
+    margin: 1em auto;
+    padding-top:50px;
+    max-width: 1200px;
+
+}
+.giphyHere li {
+    border: 1px solid #ccc;
+}
+
+.giphyHere li img {
+   display: block;
+   object-fit: cover;
+   width: 100%;
+   height: 100%;
+   transition: transform 0.3s;
+   cursor: pointer;
+}
+.giphyHere li img:hover {
+    transform: scale(1.05)
+}
+
+/* SHOW MORE BTN */
+.showMore{
+    height: 50px;
+    max-width: 830px;
+    width: 100%;
+    background: transparent;
+    border: 2px solid rgb(40, 255, 105);
+    border-radius: 20;
+    margin:20px 0px 20px 50px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.showMore:hover{
+    transform: scale(1.12);
+    border: 2px solid rgba(0, 255, 76, 0.5);
+    
+}
+
+/* SHOW BIGGER PIC */
+.showPic{
+    background-color: hsla(0, 0%, 0%, 0.767);
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    width:100%;
+    height: 100%;
+}
+.showPic img{
+    width:50vmax;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* RANDOM IMAGE */
+.randomImg{
+    padding-top:3%;
+    width:70vmax;
+    max-width: 100vmin;
 }
