@@ -10,7 +10,6 @@ let timesMore = 2;
 $(document).ready(function(){
     getTrending();
     $('.showMore').click(()=>{
-        console.log('o')
         showMoreTrending(25,timesMore);
     });
     
